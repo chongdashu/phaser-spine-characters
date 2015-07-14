@@ -7,7 +7,9 @@ together.
 
 This is still in-development.
 
-## External Libraries
+## Included  External Resources
+
+### External Libraries
 
 External libraries that this project makes use of are included,
 together with their respective licenses. 
@@ -17,3 +19,9 @@ together with their respective licenses.
 0. [Twitter Bootstrap](http://getbootstrap.com)
 0. [Bootstrap Material Design](https://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html)
 
+### External Assets
+
+External resources that are used here are also included,
+together with their respective licenses.
+
+0. [Kenney's Modular Character Pack](http://kenney.nl/assets/modular-characters)
