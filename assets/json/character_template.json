@@ -1,0 +1,30 @@
+{
+    "version": 1,
+
+    "character" : {
+
+        "hair" : {
+
+            "color" : "black",
+            "gender" : "Man",
+            "variant" : 1
+
+        }
+
+    },
+
+    "options" : {
+
+        "hair": {
+
+            "color": ["black", "blond", "brown1", "brown2", "grey", "red", "tan", "white"],
+            "gender" : ["Man", "Woman"],
+            "variant": {
+                "Man": 8,
+                "Woman": 6
+            },
+            "format": "%color%gender%variant"
+        }
+    }
+
+}
