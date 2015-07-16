@@ -84,10 +84,21 @@ def main():
 
     # Validate
     template = json.loads(open(TEMPLATE_JSON_PATH).read())
+    assets_set = set([])
     for key, option in template["parts"].iteritems():
-
         ok, image_set, folder_files = check_assets(key, option["folder"])
+        assets_set.update(image_set)
         print "All %s \tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (key, ok, len(image_set), len(folder_files))
+    print "Total assets generatable: %s" % (len(assets_set))
+    print "Total assets available: %s" % (len(get_files_in_folder(PNG_PATH)))
+
+    all_files_set = set(get_files_in_folder(PNG_PATH))
+    all_files_set.difference_update(assets_set)
+
+    if len(all_files_set) > 0:
+        print "Here are the missing generatable files:"
+        for image in all_files_set:
+            print image
 
 
 def check_assets(part_key, folder_key, n=5000):
