@@ -13,7 +13,8 @@ Constants
 '''
 
 PNG_PATH = "../assets/modularcharacters/PNG/"
-TEMPLATE_JSON_PATH = "../assets/json/character_template.json"
+PARTS_SCHEMA_PATH = "../assets/json/character_parts.json"
+CHARACTER_TEMPLATE_PATH = "../assets/json/character_template.json"
 
 
 def get_asset_files(part):
@@ -83,7 +84,7 @@ def main():
         print "|-%s" % (top_category)
 
     # Validate
-    template = json.loads(open(TEMPLATE_JSON_PATH).read())
+    template = json.loads(open(PARTS_SCHEMA_PATH).read())
     assets_set = set([])
     for key, option in template["parts"].iteritems():
         ok, image_set, folder_files = check_assets(key, option["folder"])

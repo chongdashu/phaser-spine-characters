@@ -1,124 +1,33 @@
 {
-    "version": 1,
-
-    "character" : {
-
-
-    },
+    "template_version": 1, 
 
     "parts" : {
 
-        "hair": {
-
-            "color": ["black", "blonde", "brown1", "brown2", "grey", "red", "tan", "white"],
-            "gender" : ["Man", "Woman"],
-            "variant": {
-                "Man": 8,
-                "Woman": 6
-            },
-            "format": "<color><gender><variant>",
-            "folder": "Hair"
-        },
-
-        "pants" : {
-            "color": ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
-            "variant" : 4,
-            "format" : "pants<color><variant>",
-            "folder": "Pants"
-        },
-
-        "leg" : {
-            "color" : ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
-            "variant" : ["_long", "_short", "_shorter"],
-            "format" : "pants<color><variant>",
-            "folder": "Pants"
-        },
-
-        "shirt" : {
-            "color" : ["blue", "green", "grey", "navy", "pine", "red", "white", "yellow"],
-            "variant" : 8,
-            "format" : "<color>Shirt<variant>",
-            "folder": "Shirts"
-        },
-
-
-        "arm" : {
-            "color" : ["blue", "green", "grey", "navy", "pine", "red", "white", "yellow"],
-            "variant" : ["_long", "_short", "_shorter"],
-            "format" : "<color>Arm<variant>",
-            "folder": "Shirts"
-        },
-
-        "shoe" : {
-            "color" : ["black", "blue", "brown", "brown2", "grey", "red", "tan"],
-            "variant" : 5,
-            "format" : "<color>Shoe<variant>",
-            "folder": "Shoes"
-        },
-
-        "nose" : {
-            "color" : ["tint1", "tint2", "tint3", "tint4", "tint5", "tint6", "tint7", "tint8"],
-            "variant" : 3,
-            "format": "<color>Nose<variant>",
-            "folder": "Face/Nose"
-        },
-
-        "mouth" : {
-            "variant": ["glad", "happy", "oh", "sad", "straight", "teethLower", "teethUpper"],
-            "format": "mouth_<variant>",
-            "folder": "Face/Mouth"
-        },
-
-        "eyebrow" : {
-            "variant" : 3,
-            "color" : ["black", "blonde", "brown1", "brown2", "grey", "red", "tan", "white"],
-            "format": "<color>Brow<variant>",
-            "folder": "Face/Eyebrows"
-        },
-
-        "eye" : {
-            "color" : ["Black", "Blue", "Brown", "Green", "Pine"],
-            "variant" : ["large", "small"],
-            "format" : "eye<color>_<variant>",
-            "folder" : "Face/Eyes"
-        },
-
-        "skin_arm" : {
-            "variant" : 8,
-            "format": "tint<variant>_arm",
-            "folder": "Skin"
-        },
-
-        "skin_hand" : {
-            "variant" : 8,
-            "format": "tint<variant>_hand",
-            "folder": "Skin"
-        },
-
-        "skin_head" : {
-            "variant" : 8,
-            "format": "tint<variant>_head",
-            "folder": "Skin"
-        },
-
-        "skin_leg" : {
-            "variant" : 8,
-            "format": "tint<variant>_leg",
-            "folder": "Skin"
-        },
-
-        "skin_neck" : {
-            "variant" : 8,
-            "format": "tint<variant>_neck",
-            "folder": "Skin"
-        },
-
-        "face" : {
-            "variant" : 4,
-            "format": "face<variant>",
-            "folder": "Face/Completes"
-        }
-
+        "hair": {},
+        "skin_head": {},
+        "eyebrow_right": {},
+        "eyebrow_left": {},
+        "eye_right": {},
+        "eye_left": {},
+        "nose": {},
+        "mouth" : {},
+        "skin_neck": {},
+        "shirt" : {},
+        "arm_right": {},
+        "arm_left": {},
+        "skin_arm_right" : {},
+        "skin_arm_left": {},
+        "skin_hand_right" : {},
+        "skin_hand_left": {},
+        "pants": {},
+        "leg_right" : {},
+        "leg_left" : {},
+        "skin_leg_right": {},
+        "skin_leg_left": {},
+        "shoe_right": {},
+        "shoe_left": {}
     }
+
+    
 
 }
