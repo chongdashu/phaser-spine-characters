@@ -35,12 +35,11 @@ def get_random(part):
     # character = template["character"]
 
     format = template["options"][part]["format"]
-    prefix = re.findall("^([a-z]+)\%", format)
-    format_keys = re.findall("\%([a-z]+)", format)
+    format_keys = re.findall("\<([a-z]+)\>", format)
 
     obj = {}
 
-    image_name = prefix[0] if prefix else ""
+    image_name = format
 
     for key in format_keys:
         choices = options[part][key]
@@ -61,7 +60,9 @@ def get_random(part):
             choice = random.choice(choices)
 
             obj[key] = choice
-            image_name += str(choice)
+
+    for key in format_keys:
+        image_name = image_name.replace("<%s>" % (key), str(obj[key]))
 
     image_name += ".png"
 
@@ -85,7 +86,7 @@ def main():
     template = json.loads(open(TEMPLATE_JSON_PATH).read())
 
 
-def check_assets(part_key, folder_key, n=1000):
+def check_assets(part_key, folder_key, n=5000):
     all_ok = True
     image_names = []
     folder_files = get_asset_files(folder_key)
@@ -112,3 +113,9 @@ if __name__ == "__main__":
 
     ok, image_set, folder_files = check_assets("leg", "pants")
     print "All Lengths\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
+
+    ok, image_set, folder_files = check_assets("shirt", "shirts")
+    print "All Shirts\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
+
+    ok, image_set, folder_files = check_assets("arm", "shirts")
+    print "All Arms\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))

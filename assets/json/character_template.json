@@ -4,11 +4,9 @@
     "character" : {
 
         "hair" : {
-
             "color" : "black",
             "gender" : "Man",
             "variant" : 1
-
         },
 
         "pants" : {
@@ -18,8 +16,19 @@
 
         "leg" : {
             "color" : "Brown",
-            "variant" : "_long" 
+            "variant" : "_long"
+        },
+
+        "shirt" : {
+            "color" : "blue",
+            "variant" : 7
+        },
+
+        "arm" : {
+            "color": "yellow",
+            "variant" : "_long"
         }
+
 
     },
 
@@ -33,20 +42,34 @@
                 "Man": 8,
                 "Woman": 6
             },
-            "format": "%color%gender%variant"
+            "format": "<color><gender><variant>"
         },
 
         "pants" : {
             "color": ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
             "variant" : 4,
-            "format" : "pants%color%variant"
+            "format" : "pants<color><variant>"
         },
 
         "leg" : {
             "color" : ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
             "variant" : ["_long", "_short", "_shorter"],
-            "format" : "pants%color%variant"
+            "format" : "pants<color><variant>"
+        },
+
+        "shirt" : {
+            "color" : ["blue", "green", "grey", "navy", "pine", "red", "white", "yellow"],
+            "variant" : 8,
+            "format" : "<color>Shirt<variant>"
+        },
+
+
+        "arm" : {
+            "color" : ["blue", "green", "grey", "navy", "pine", "red", "white", "yellow"],
+            "variant" : ["_long", "_short", "_shorter"],
+            "format" : "<color>Arm<variant>"
         }
+
     }
 
 }
