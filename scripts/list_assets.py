@@ -14,6 +14,7 @@ character = None
 Constants
 '''
 
+JSON_PATH = "../assets/json/"
 PNG_PATH = "../assets/modularcharacters/PNG/"
 PARTS_SCHEMA_PATH = "../assets/json/character_parts.json"
 CHARACTER_TEMPLATE_PATH = "../assets/json/character_template.json"
@@ -71,6 +72,28 @@ def get_random(part):
     return obj, image_name
 
 
+def generate_character():
+
+    character_template = json.loads(open(CHARACTER_TEMPLATE_PATH).read())
+    character = {}
+
+    character["template_version"] = character_template["template_version"]
+    character["parts"] = {}
+
+    for part_key, part_obj in character_template["parts"].iteritems():
+        part_type = part_obj["part_type"]
+        part_obj["part_info"], part_obj["image"] = get_random(part_type)
+
+        character["parts"][part_key] = part_obj
+
+    return character
+
+
+def save_character(character, path):
+    s = json.dumps(character, indent=4)
+    open(path, "w").write(s)
+
+
 def main():
 
     if not os.path.isdir(PNG_PATH):
@@ -104,6 +127,9 @@ def main():
         print "Here are the missing generatable files:"
         for image in all_files_set:
             print image
+
+    c = generate_character()
+    save_character(c, JSON_PATH + "character_generated.json")
 
 
 def check_assets(part_key, folder_key, n=5000):
