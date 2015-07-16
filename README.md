@@ -7,6 +7,10 @@ together.
 
 This is still in-development.
 
+## Character Changes
+
++ In `Pants/Yellow/`: renamed `legYellow_<...>` to `pantsYellow_<...>` for consistency.
+
 ## Included  External Resources
 
 ### External Libraries

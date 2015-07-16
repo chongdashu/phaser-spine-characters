@@ -9,6 +9,16 @@
             "gender" : "Man",
             "variant" : 1
 
+        },
+
+        "pants" : {
+            "color" : "Blue",
+            "variant" : 1
+        },
+
+        "leg" : {
+            "color" : "Brown",
+            "variant" : "_long" 
         }
 
     },
@@ -17,13 +27,25 @@
 
         "hair": {
 
-            "color": ["black", "blond", "brown1", "brown2", "grey", "red", "tan", "white"],
+            "color": ["black", "blonde", "brown1", "brown2", "grey", "red", "tan", "white"],
             "gender" : ["Man", "Woman"],
             "variant": {
                 "Man": 8,
                 "Woman": 6
             },
             "format": "%color%gender%variant"
+        },
+
+        "pants" : {
+            "color": ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
+            "variant" : 4,
+            "format" : "pants%color%variant"
+        },
+
+        "leg" : {
+            "color" : ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
+            "variant" : ["_long", "_short", "_shorter"],
+            "format" : "pants%color%variant"
         }
     }
 

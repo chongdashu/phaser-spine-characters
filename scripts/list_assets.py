@@ -16,17 +16,32 @@ PNG_PATH = "../assets/modularcharacters/PNG/"
 TEMPLATE_JSON_PATH = "../assets/json/character_template.json"
 
 
+def get_asset_files(part):
+    return get_files_in_folder(PNG_PATH + part.title())
+
+
+def get_files_in_folder(path):
+    if os.path.isfile(path):
+        return [path.split("/")[-1]]
+    files = []
+    for folder in os.listdir(path):
+        files += get_files_in_folder(path + "/" + folder)
+    return files
+
+
 def get_random(part):
 
     options = template["options"]
-    character = template["character"]
+    # character = template["character"]
 
     format = template["options"][part]["format"]
+    prefix = re.findall("^([a-z]+)\%", format)
     format_keys = re.findall("\%([a-z]+)", format)
 
     obj = {}
 
-    image_name = ""
+    image_name = prefix[0] if prefix else ""
+
     for key in format_keys:
         choices = options[part][key]
 
@@ -37,7 +52,8 @@ def get_random(part):
 
             prev_key_choice = obj[prev_key]
             choices = choices[prev_key_choice]
-            if type(choices) == int:
+
+        if type(choices) == int:
                 choices = range(1, 1+choices)
 
         if type(choices) == list:
@@ -69,12 +85,30 @@ def main():
     template = json.loads(open(TEMPLATE_JSON_PATH).read())
 
 
+def check_assets(part_key, folder_key, n=1000):
+    all_ok = True
+    image_names = []
+    folder_files = get_asset_files(folder_key)
+    for i in range(n):
+        obj, image_name = get_random(part_key)
+        ok = image_name in folder_files
+        all_ok = all_ok and ok
+        if not all_ok:
+            print "Couldn't find '%s' for part %s in folder %s" % (image_name, part_key, folder_key)
+            break
+        image_names.append(image_name)
+
+    return all_ok, set(image_names), folder_files
+
 
 if __name__ == "__main__":
     main()
 
-    obj, image_name = get_random("hair")
+    ok, image_set, folder_files = check_assets("hair", "hair")
+    print "All Hair\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
 
-    print obj
-    print image_name
+    ok, image_set, folder_files = check_assets("pants", "pants")
+    print "All Pants\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
 
+    ok, image_set, folder_files = check_assets("leg", "pants")
+    print "All Lengths\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
