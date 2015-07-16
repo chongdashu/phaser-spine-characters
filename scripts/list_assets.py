@@ -7,6 +7,8 @@ import random
 Global variables
 '''
 template = None
+options = None
+character = None
 
 '''
 Constants
@@ -33,7 +35,6 @@ def get_files_in_folder(path):
 def get_random(part):
 
     options = template["parts"]
-    # character = template["character"]
 
     format = template["parts"][part]["format"]
     format_keys = re.findall("\<([a-z]+)\>", format)
@@ -76,6 +77,9 @@ def main():
         print "Could not locate the path to modularcharacters/PNG"
 
     global template
+    global character
+
+    character = json.loads(open(CHARACTER_TEMPLATE_PATH).read())
 
     top_categories = [top_category for top_category in os.listdir(PNG_PATH) if not top_category.startswith(".")]
     print "Listing the different %s top-level categories." % (len(top_categories))
