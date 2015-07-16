@@ -7,7 +7,23 @@ together.
 
 This is still in-development.
 
-## Character Changes
+## Descriptions
+
+### Assets
+
+#### JSON
+
+JSON files serves as a data format to store information, probably particular useful for passing between server and client.
+
+0. `character_template.json` is a schema for a character.
+
+## Scripts
+
+The scripts folder contains some useful scripts. Here are a list of them:
+
+0. `list_assets.py`: Looks through the `character_template.json` schema and uses it to generate different possible image names for each part of the character. This is just a utility script to make sure that no PNG image file in `assets/modularcharacters/PNG` is unused.
+
+### Character Changes
 
 + In `Pants/Yellow/`: renamed `legYellow_<...>` to `pantsYellow_<...>` for consistency.
 + In `Shirts/White/`: renamed `armWhite_<...>` to `whiteArm_<...>` for consistency.
