@@ -31,10 +31,10 @@ def get_files_in_folder(path):
 
 def get_random(part):
 
-    options = template["options"]
+    options = template["parts"]
     # character = template["character"]
 
-    format = template["options"][part]["format"]
+    format = template["parts"][part]["format"]
     format_keys = re.findall("\<([a-z]+)\>", format)
 
     obj = {}
@@ -84,7 +84,7 @@ def main():
 
     # Validate
     template = json.loads(open(TEMPLATE_JSON_PATH).read())
-    for key, option in template["options"].iteritems():
+    for key, option in template["parts"].iteritems():
 
         ok, image_set, folder_files = check_assets(key, option["folder"])
         print "All %s \tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (key, ok, len(image_set), len(folder_files))
