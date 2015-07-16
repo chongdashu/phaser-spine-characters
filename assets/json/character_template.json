@@ -30,6 +30,8 @@
         }
 
 
+
+
     },
 
     "options" : {
@@ -68,6 +70,12 @@
             "color" : ["blue", "green", "grey", "navy", "pine", "red", "white", "yellow"],
             "variant" : ["_long", "_short", "_shorter"],
             "format" : "<color>Arm<variant>"
+        },
+
+        "shoe" : {
+            "color" : ["black", "blue", "brown", "brown2", "grey", "red", "tan"],
+            "variant" : 5,
+            "format" : "<color>Shoe<variant>"
         }
 
     }

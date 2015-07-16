@@ -119,3 +119,6 @@ if __name__ == "__main__":
 
     ok, image_set, folder_files = check_assets("arm", "shirts")
     print "All Arms\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
+
+    ok, image_set, folder_files = check_assets("shoe", "shoes")
+    print "All Arms\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))

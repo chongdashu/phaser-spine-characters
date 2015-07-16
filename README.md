@@ -10,6 +10,9 @@ This is still in-development.
 ## Character Changes
 
 + In `Pants/Yellow/`: renamed `legYellow_<...>` to `pantsYellow_<...>` for consistency.
++ In `Shirts/White/`: renamed `armWhite_<...>` to `whiteArm_<...>` for consistency.
++ In `Shirts/Yellow/`: renamed `shirtYellow<...>` to `yellowShirt<...>` for consistency.
+
 
 ## Included  External Resources
 
