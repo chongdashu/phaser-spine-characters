@@ -2,156 +2,156 @@
     "template_version": 1, 
     "parts": {
         "leg_left": {
-            "image": "pantsLightBlue_shorter.png", 
+            "image": "pantsNavy_short.png", 
             "part_type": "leg", 
             "part_info": {
-                "color": "LightBlue", 
-                "variant": "_shorter"
+                "color": "Navy", 
+                "variant": "_short"
             }
         }, 
         "skin_head": {
-            "image": "tint3_head.png", 
+            "image": "tint2_head.png", 
             "part_type": "skin_head", 
             "part_info": {
-                "variant": 3
-            }
-        }, 
-        "eyebrow_right": {
-            "image": "blackBrow1.png", 
-            "part_type": "eyebrow", 
-            "part_info": {
-                "color": "black", 
-                "variant": 1
-            }
-        }, 
-        "shoe_right": {
-            "image": "redShoe5.png", 
-            "part_type": "shoe", 
-            "part_info": {
-                "color": "red", 
-                "variant": 5
-            }
-        }, 
-        "skin_leg_right": {
-            "image": "tint5_leg.png", 
-            "part_type": "skin_leg", 
-            "part_info": {
-                "variant": 5
-            }
-        }, 
-        "skin_hand_right": {
-            "image": "tint4_hand.png", 
-            "part_type": "skin_hand", 
-            "part_info": {
-                "variant": 4
-            }
-        }, 
-        "eyebrow_left": {
-            "image": "tanBrow3.png", 
-            "part_type": "eyebrow", 
-            "part_info": {
-                "color": "tan", 
-                "variant": 3
-            }
-        }, 
-        "shirt": {
-            "image": "greenShirt7.png", 
-            "part_type": "shirt", 
-            "part_info": {
-                "color": "green", 
-                "variant": 7
-            }
-        }, 
-        "skin_arm_left": {
-            "image": "tint5_arm.png", 
-            "part_type": "skin_arm", 
-            "part_info": {
-                "variant": 5
-            }
-        }, 
-        "shoe_left": {
-            "image": "brownShoe5.png", 
-            "part_type": "shoe", 
-            "part_info": {
-                "color": "brown", 
-                "variant": 5
-            }
-        }, 
-        "pants": {
-            "image": "pantsRed2.png", 
-            "part_type": "pants", 
-            "part_info": {
-                "color": "Red", 
                 "variant": 2
             }
         }, 
+        "eyebrow_right": {
+            "image": "brown1Brow3.png", 
+            "part_type": "eyebrow", 
+            "part_info": {
+                "color": "brown1", 
+                "variant": 3
+            }
+        }, 
+        "shoe_right": {
+            "image": "blueShoe1.png", 
+            "part_type": "shoe", 
+            "part_info": {
+                "color": "blue", 
+                "variant": 1
+            }
+        }, 
+        "skin_leg_right": {
+            "image": "tint6_leg.png", 
+            "part_type": "skin_leg", 
+            "part_info": {
+                "variant": 6
+            }
+        }, 
+        "skin_hand_right": {
+            "image": "tint1_hand.png", 
+            "part_type": "skin_hand", 
+            "part_info": {
+                "variant": 1
+            }
+        }, 
+        "eyebrow_left": {
+            "image": "brown2Brow1.png", 
+            "part_type": "eyebrow", 
+            "part_info": {
+                "color": "brown2", 
+                "variant": 1
+            }
+        }, 
+        "shirt": {
+            "image": "whiteShirt3.png", 
+            "part_type": "shirt", 
+            "part_info": {
+                "color": "white", 
+                "variant": 3
+            }
+        }, 
+        "skin_arm_left": {
+            "image": "tint2_arm.png", 
+            "part_type": "skin_arm", 
+            "part_info": {
+                "variant": 2
+            }
+        }, 
+        "shoe_left": {
+            "image": "blueShoe3.png", 
+            "part_type": "shoe", 
+            "part_info": {
+                "color": "blue", 
+                "variant": 3
+            }
+        }, 
+        "pants": {
+            "image": "pantsBrown4.png", 
+            "part_type": "pants", 
+            "part_info": {
+                "color": "Brown", 
+                "variant": 4
+            }
+        }, 
         "leg_right": {
-            "image": "pantsGreen_shorter.png", 
+            "image": "pantsPine_short.png", 
             "part_type": "leg", 
             "part_info": {
-                "color": "Green", 
-                "variant": "_shorter"
+                "color": "Pine", 
+                "variant": "_short"
             }
         }, 
         "eye_right": {
-            "image": "eyeBlack_small.png", 
+            "image": "eyeBlue_small.png", 
             "part_type": "eye", 
             "part_info": {
-                "color": "Black", 
+                "color": "Blue", 
                 "variant": "small"
             }
         }, 
         "skin_arm_right": {
-            "image": "tint8_arm.png", 
+            "image": "tint7_arm.png", 
             "part_type": "skin_arm", 
             "part_info": {
-                "variant": 8
+                "variant": 7
             }
         }, 
         "skin_leg_left": {
-            "image": "tint1_leg.png", 
+            "image": "tint6_leg.png", 
             "part_type": "skin_leg", 
             "part_info": {
-                "variant": 1
+                "variant": 6
             }
         }, 
         "mouth": {
-            "image": "mouth_teethLower.png", 
+            "image": "mouth_oh.png", 
             "part_type": "mouth", 
             "part_info": {
-                "variant": "teethLower"
+                "variant": "oh"
             }
         }, 
         "hair": {
-            "image": "greyMan5.png", 
+            "image": "blondeMan8.png", 
             "part_type": "hair", 
             "part_info": {
-                "color": "grey", 
+                "color": "blonde", 
                 "gender": "Man", 
-                "variant": 5
+                "variant": 8
             }
         }, 
         "arm_right": {
-            "image": "redArm_long.png", 
+            "image": "whiteArm_short.png", 
             "part_type": "arm", 
             "part_info": {
-                "color": "red", 
-                "variant": "_long"
+                "color": "white", 
+                "variant": "_short"
             }
         }, 
         "eye_left": {
-            "image": "eyeBrown_small.png", 
+            "image": "eyeBlue_small.png", 
             "part_type": "eye", 
             "part_info": {
-                "color": "Brown", 
+                "color": "Blue", 
                 "variant": "small"
             }
         }, 
         "skin_hand_left": {
-            "image": "tint3_hand.png", 
+            "image": "tint5_hand.png", 
             "part_type": "skin_hand", 
             "part_info": {
-                "variant": 3
+                "variant": 5
             }
         }, 
         "skin_neck": {
@@ -162,18 +162,18 @@
             }
         }, 
         "nose": {
-            "image": "tint4Nose2.png", 
+            "image": "tint8Nose2.png", 
             "part_type": "nose", 
             "part_info": {
-                "color": "tint4", 
+                "color": "tint8", 
                 "variant": 2
             }
         }, 
         "arm_left": {
-            "image": "navyArm_short.png", 
+            "image": "yellowArm_short.png", 
             "part_type": "arm", 
             "part_info": {
-                "color": "navy", 
+                "color": "yellow", 
                 "variant": "_short"
             }
         }

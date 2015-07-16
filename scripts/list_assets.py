@@ -2,6 +2,7 @@ import os
 import json
 import re
 import random
+import shutil
 
 '''
 Global variables
@@ -9,6 +10,7 @@ Global variables
 template = None
 options = None
 character = None
+c = None
 
 '''
 Constants
@@ -18,6 +20,19 @@ JSON_PATH = "../assets/json/"
 PNG_PATH = "../assets/modularcharacters/PNG/"
 PARTS_SCHEMA_PATH = "../assets/json/character_parts.json"
 CHARACTER_TEMPLATE_PATH = "../assets/json/character_template.json"
+
+
+def ensurePathForFile(filename):
+    directory = os.path.dirname(filename)
+    if not os.path.isdir(directory):
+        print "*Note* Folder '%s' doesn't exist. Creating for file '%s'" %(directory,filename)
+        os.makedirs(directory)
+
+
+def ensurePathForFolder(foldername):
+    if not os.path.exists(foldername):
+        print "*Note* Folder '%s' doesn't exist. Creating now." %(foldername)
+        os.makedirs(foldername)
 
 
 def get_asset_files(part):
@@ -94,6 +109,31 @@ def save_character(character, path):
     open(path, "w").write(s)
 
 
+def get_image_path(image_name, folder=""):
+
+    files = [f for f in os.listdir(folder) if os.path.isfile(folder + "/" + f)]
+    if image_name in files:
+        return folder + "/" + image_name
+
+    folders = [f for f in os.listdir(folder) if os.path.isdir(folder + "/" + f)]
+
+    for fold in folders:
+        path = get_image_path(image_name, folder + "/" + fold)
+        if path:
+            return path
+
+
+def save_character_images(character, target_folder):
+    images = [part_obj["image"] for (part_key, part_obj) in character["parts"].iteritems()]
+    for image in images:
+        path = get_image_path(image, PNG_PATH)
+        if not path:
+            print "Can't find: %s" % (path)
+            exit(0)
+        ensurePathForFolder(target_folder)
+        shutil.copy2(path, target_folder)
+
+
 def main():
 
     if not os.path.isdir(PNG_PATH):
@@ -128,8 +168,10 @@ def main():
         for image in all_files_set:
             print image
 
+    global c
     c = generate_character()
     save_character(c, JSON_PATH + "character_generated.json")
+    save_character_images(c, "../gen/spine")
 
 
 def check_assets(part_key, folder_key, n=5000):
