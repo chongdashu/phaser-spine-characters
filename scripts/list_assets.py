@@ -84,6 +84,10 @@ def main():
 
     # Validate
     template = json.loads(open(TEMPLATE_JSON_PATH).read())
+    for key, option in template["options"].iteritems():
+
+        ok, image_set, folder_files = check_assets(key, option["folder"])
+        print "All %s \tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (key, ok, len(image_set), len(folder_files))
 
 
 def check_assets(part_key, folder_key, n=5000):
@@ -104,21 +108,3 @@ def check_assets(part_key, folder_key, n=5000):
 
 if __name__ == "__main__":
     main()
-
-    ok, image_set, folder_files = check_assets("hair", "hair")
-    print "All Hair\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
-
-    ok, image_set, folder_files = check_assets("pants", "pants")
-    print "All Pants\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
-
-    ok, image_set, folder_files = check_assets("leg", "pants")
-    print "All Lengths\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
-
-    ok, image_set, folder_files = check_assets("shirt", "shirts")
-    print "All Shirts\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
-
-    ok, image_set, folder_files = check_assets("arm", "shirts")
-    print "All Arms\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
-
-    ok, image_set, folder_files = check_assets("shoe", "shoes")
-    print "All Arms\tOK?:\t%s\t(Total: %s)\t(Files: %s)" % (ok, len(image_set), len(folder_files))
