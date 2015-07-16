@@ -25,12 +25,16 @@ The scripts folder contains some useful scripts. Here are a list of them:
 
 ### Character Changes
 
+I detected some naming inconsistencies in some of the files provided in the character pack. These were detected by the script `list_assets.py` above. The following list specifies which asset files, particularly PNG files, were renamed from the original set in order to maintain a consistent naming convention.
+
 + In `Pants/Yellow/`: renamed `legYellow_<...>` to `pantsYellow_<...>` for consistency.
 + In `Shirts/White/`: renamed `armWhite_<...>` to `whiteArm_<...>` for consistency.
 + In `Shirts/Yellow/`: renamed `shirtYellow<...>` to `yellowShirt<...>` for consistency.
 
 
 ## Included  External Resources
+
+Thanks to generous folks who have provided many different libraries/tools that have made this project possible.
 
 ### External Libraries
 
