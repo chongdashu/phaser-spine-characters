@@ -124,14 +124,15 @@ def get_image_path(image_name, folder=""):
 
 
 def save_character_images(character, target_folder):
-    images = [part_obj["image"] for (part_key, part_obj) in character["parts"].iteritems()]
-    for image in images:
+    key_and_images = [(part_key, part_obj["image"]) for (part_key, part_obj) in character["parts"].iteritems()]
+
+    for part_key, image in key_and_images:
         path = get_image_path(image, PNG_PATH)
         if not path:
             print "Can't find: %s" % (path)
             exit(0)
         ensurePathForFolder(target_folder)
-        shutil.copy2(path, target_folder)
+        shutil.copy2(path, target_folder + "/%s-%s" % (part_key, image))
 
 
 def main():
