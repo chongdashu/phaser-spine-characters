@@ -104,8 +104,8 @@ def generate_character():
     return character
 
 
-def save_character(character, path):
-    s = json.dumps(character, indent=4)
+def save_character(character, path, indent=4):
+    s = json.dumps(character, indent=indent)
     open(path, "w").write(s)
 
 
@@ -171,8 +171,14 @@ def main():
 
     global c
     c = generate_character()
-    save_character(c, JSON_PATH + "character_generated.json")
-    save_character_images(c, "../gen/spine")
+
+    ## Generate a random character, no indent so that I can copy and paste it directly.
+    ensurePathForFile("../gen/json/random._character.json")
+    save_character(c, "../gen/json/random_character.json", indent=None)
+
+
+    # save_character(c, JSON_PATH + "character_generated.json")
+    # save_character_images(c, "../gen/spine")
 
 
 def check_assets(part_key, folder_key, n=5000):

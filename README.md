@@ -1,7 +1,7 @@
-# Phaser-Spine-Dragonbones
+# Spine-Characters
 
-An example project to get Phaser, Spine, and Dragonbones working
-together.
+An example project to get some character images working working
+together in Spine.
 
 ## Status
 
