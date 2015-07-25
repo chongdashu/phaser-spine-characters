@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Spine-Characters | Using jQuery</title>
+<script src="../../lib/spine-js/spine.js"></script>
+<script src="../../lib/spine-js/spine-canvas.js"></script>
+<script src="../../lib/jquery/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+
+<div style="display:none">
+
+</div>
+
+<canvas id="canvas" width="800" height="600"/>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        var url = "skeleton.json";
+        $.get(url, function(ret) {
+            console.log("[Success] GET on %s, ret=%o", url, ret);
+            renderSpine(ret);
+        });
+
+    });
+
+    var renderSpine = function(jsonString) {
+        var renderer = new spine.SkeletonRenderer("./character_images/");
+        renderer.scale = 0.5;
+        renderer.load(jsonString);
+        // renderer.state.data.defaultMix = 0.4;
+        renderer.state.setAnimationByName(0, "idle", true);
+        // renderer.state.addAnimationByName(0, "jump", false, 3);
+        // renderer.state.addAnimationByName(0, "run", true, 0);
+        renderer.skeleton.x = 400;
+        renderer.skeleton.y = 300;
+        renderer.animate("canvas");
+    };
+
+
+</script>
+
+</body>
+</html>
