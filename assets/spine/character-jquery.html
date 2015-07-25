@@ -28,6 +28,8 @@
 <script type="text/javascript">
 
     var characterInfo = {};
+    var renderer = null;
+    var skeleton = null;
 
     $(document).ready(function() {
 
@@ -35,7 +37,7 @@
         // --------------------
         var url = "character.json";
         $.get(url, function(ret) {
-            console.log("[Success] GET on %s, ret=%o", url, ret);
+            // console.log("[Success] GET on %s, ret=%o", url, ret);
             renderSpine(ret);
         });
 
@@ -43,19 +45,62 @@
         // ------------------------
         url = "../json/character_generated.json";
         $.get(url, function(ret) {
-            console.log("[Success] GET on %s, ret=%o", url, ret);
+            // console.log("[Success] GET on %s, ret=%o", url, ret);
             characterInfo = JSON.parse(ret);
+        });
+
+        $("#button-change-shirt").click(function(e) {
+            if (skeleton) {
+                var slot = skeleton.findSlot("slot_shirt");
+                if (slot) {
+                    // var attachment = createAttachmentFromImagePath("character_images/shirt-blueShirt8.png");
+                    // var attachment = createAttachmentFromImagePath("character_images/mouth-mouth_teethUpper.png");
+                    var attachment = createAttachmentFromImagePath("../modularcharacters/PNG/Shirts/Green/greenShirt8.png");
+                    // attachment.updateOffset();
+                    console.log("attachment=%o", attachment);
+
+
+                    var existingAttachment = slot.attachment;
+
+                    console.log("existingAttachment=%o", existingAttachment);
+                    slot.attachment.rendererObject = attachment.rendererObject;
+
+                    slot.attachment.updateOffset();
+
+                    // skeleton.readAttachment(skin, attachmentName, slotEntry[attachmentName]);
+                    // if (attachment) skin.addAttachment(slotIndex, attachmentName, attachment);
+                    
+                    // slot.setAttachment(attachment);
+
+                    
+
+
+                }
+            }
         });
 
 
     });
 
+    var createAttachmentFromImagePath = function(imagePath) {
+        var image = new Image();
+        image.src = imagePath;
+        var pathSplit = imagePath.replace(".png", "").split("/");
+        var name = pathSplit[pathSplit.length-1];
+        var attachment = new spine.RegionAttachment(name);
+        attachment.rendererObject = image;
+        return attachment;
+    };
+
     var renderSpine = function(jsonString) {
-        var renderer = new spine.SkeletonRenderer("./character_images/");
+        renderer = new spine.SkeletonRenderer("./character_images/");
         renderer.scale = 0.5;
         renderer.load(jsonString);
         // renderer.state.data.defaultMix = 0.4;
         renderer.state.setAnimationByName(0, "idle", true);
+
+        skeleton = renderer.skeleton;
+
         // renderer.state.addAnimationByName(0, "jump", false, 3);
         // renderer.state.addAnimationByName(0, "run", true, 0);
         renderer.skeleton.x = 400;
