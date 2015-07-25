@@ -174,7 +174,7 @@ def main():
 
     ## Generate a random character, no indent so that I can copy and paste it directly.
     ensurePathForFile("../gen/json/random_character.json")
-    save_character(c, "../gen/json/random_character.json", indent=None)
+    save_character(c, "../gen/json/random_character.json", indent=4)
 
 
     # save_character(c, JSON_PATH + "character_generated.json")

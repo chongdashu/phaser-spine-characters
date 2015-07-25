@@ -9,21 +9,44 @@
 </head>
 <body>
 
-<div style="display:none">
-
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-10">
+            <canvas id="canvas" width="800" height="600"/>
+        </div> <!-- end .col-lg-10 -->
+        <div class="col-lg-2"></div>
+    </div> <!-- end .row -->
+    <div class="row">
+        <div class="col-lg-12"></div>
+            <button id="button-change-shirt">Change Shirt</button>
+        </div>
+        
+    </div> <!-- end .row -->
 </div>
-
-<canvas id="canvas" width="800" height="600"/>
 
 <script type="text/javascript">
 
+    var characterInfo = {};
+
     $(document).ready(function() {
 
-        var url = "skeleton.json";
+        // Load the spine JSON.
+        // --------------------
+        var url = "character.json";
         $.get(url, function(ret) {
             console.log("[Success] GET on %s, ret=%o", url, ret);
             renderSpine(ret);
         });
+
+        // Load the character info.
+        // ------------------------
+        url = "../json/character_generated.json";
+        $.get(url, function(ret) {
+            console.log("[Success] GET on %s, ret=%o", url, ret);
+            characterInfo = JSON.parse(ret);
+        });
+
 
     });
 
