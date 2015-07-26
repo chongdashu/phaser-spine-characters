@@ -20,6 +20,7 @@
     <div class="row">
         <div class="col-lg-12"></div>
             <button id="button-change-shirt">Change Shirt</button>
+            <button id="button-change-everything">Change Everything</button>
         </div>
         
     </div> <!-- end .row -->
@@ -43,7 +44,9 @@
 
         // Load the character info.
         // ------------------------
-        url = "../json/character_generated.json";
+        var choices = 3;
+        var choice = 1+Math.floor(3*Math.random());
+        url = "../json/character_generated_" + choice + ".json";
         $.get(url, function(ret) {
             // console.log("[Success] GET on %s, ret=%o", url, ret);
             characterInfo = JSON.parse(ret);
@@ -71,16 +74,60 @@
                     // if (attachment) skin.addAttachment(slotIndex, attachmentName, attachment);
                     
                     // slot.setAttachment(attachment);
-
-                    
-
-
                 }
             }
         });
 
+        $("#button-change-everything").click(function(e) {
+            if (skeleton && characterInfo) {
+                var partNames = Object.keys(characterInfo["parts"]);
+                $(partNames).each(function(index, partName) {
+                    var slotName = "slot_" + partName;
+
+                    console.log("Slot Name: %s", slotName);
+
+                    var slot = skeleton.findSlot(slotName);
+                    if (!slot) {
+                        console.warn("Couldn't find slot: %s", slotName);
+                        return;
+                    }
+
+                    var partInfo = characterInfo["parts"][partName];
+                    var partImageName = partInfo["image"];
+                    var partImagePath = partInfo["image_path"].replace("assets/", "");
+
+                    console.log("name=%s, path=%s", partImageName, partImagePath);
+
+                    createImageFromPath(partImagePath, function(image) {
+                        if (!slot.attachment) {
+                            console.warn("Couldn't find slot attachment: %s", slotName);
+                            return;
+                        }
+                        slot.attachment.rendererObject = image;
+                        slot.attachment.updateOffset();
+                    });
+
+
+
+                });
+            };
+        });
+
 
     });
+
+    var createImageFromPath = function(imagePath, onLoadCallback) {
+
+        var image = new Image();
+        image.src = imagePath;
+        $(image).load(function(e) {
+            console.log("[createImageFromPath] image loaded, %s", imagePath);
+            if (onLoadCallback) {
+                onLoadCallback(image);
+            }
+        });
+
+    };
 
     var createAttachmentFromImagePath = function(imagePath) {
         var image = new Image();

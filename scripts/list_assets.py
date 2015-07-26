@@ -18,7 +18,7 @@ Constants
 
 JSON_PATH = "../assets/json/"
 PNG_PATH = "../assets/modularcharacters/PNG/"
-PARTS_SCHEMA_PATH = "../assets/json/character_parts.json"
+PARTS_SCHEMA_PATH = "../assets/json/character_schema.json"
 CHARACTER_TEMPLATE_PATH = "../assets/json/character_template.json"
 
 
@@ -98,6 +98,7 @@ def generate_character():
     for part_key, part_obj in character_template["parts"].iteritems():
         part_type = part_obj["part_type"]
         part_obj["part_info"], part_obj["image"] = get_random(part_type)
+        part_obj["image_path"] = get_image_path(part_obj["image"], PNG_PATH)
 
         character["parts"][part_key] = part_obj
 
@@ -175,7 +176,6 @@ def main():
     ## Generate a random character, no indent so that I can copy and paste it directly.
     ensurePathForFile("../gen/json/random_character.json")
     save_character(c, "../gen/json/random_character.json", indent=4)
-
 
     # save_character(c, JSON_PATH + "character_generated.json")
     # save_character_images(c, "../gen/spine")
