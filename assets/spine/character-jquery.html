@@ -42,15 +42,7 @@
             renderSpine(ret);
         });
 
-        // Load the character info.
-        // ------------------------
-        var choices = 3;
-        var choice = 1+Math.floor(3*Math.random());
-        url = "../json/character_generated_" + choice + ".json";
-        $.get(url, function(ret) {
-            // console.log("[Success] GET on %s, ret=%o", url, ret);
-            characterInfo = JSON.parse(ret);
-        });
+        
 
         $("#button-change-shirt").click(function(e) {
             if (skeleton) {
@@ -79,6 +71,18 @@
         });
 
         $("#button-change-everything").click(function(e) {
+            // Load the character info.
+            // ------------------------
+            var choices = 3;
+            var choice = 1+Math.floor(3*Math.random());
+            url = "../json/character_generated_" + choice + ".json";
+            $.get(url, function(ret) {
+                console.log("[Success] GET on %s, ret=%o", url, ret);
+                characterInfo = JSON.parse(ret);
+            });
+
+            // console.log("Requested: %s", url);
+            
             if (skeleton && characterInfo) {
                 var partNames = Object.keys(characterInfo["parts"]);
                 $(partNames).each(function(index, partName) {
