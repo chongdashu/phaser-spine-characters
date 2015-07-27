@@ -48,7 +48,27 @@ def main():
     global prefixes
 
     # normalize_shirts_or_pants("Shirts")
-    normalize_shirts_or_pants("Pants")
+    # normalize_shirts_or_pants("Pants")
+
+    hairColors = ["Black", "Blonde", "Brown 1", "Brown 2", "Grey", "Red", "Tan", "White"]
+    for hairColor in hairColors:
+        folder = "Hair" + "/" + hairColor
+        images = [image for image in core.get_files_in_folder(core.PNG_PATH + "Hair" + "/" + hairColor)]
+        print "Analyzing %s" % (folder)
+        maxWidth = 0
+        maxHeight = 0
+        maxWidthImageName = ""
+        maxHeightImageName = ""
+        for image in images:
+            im = Image.open(core.get_image_path(image, core.PNG_PATH))
+            if (im.size[0] > maxWidth):
+                maxWidth = im.size[0]
+                maxWidthImageName = image
+            if (im.size[1] > maxHeight):
+                maxHeight = im.size[1]
+                maxHeightImageName = image
+        print "size.max = (%s,%s), names=(%s,%s)" % (maxWidth, maxHeight, maxWidthImageName, maxHeightImageName)
+
 
 if __name__ == "__main__":
     main()
