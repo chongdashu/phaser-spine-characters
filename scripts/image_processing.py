@@ -51,10 +51,12 @@ def main():
     # normalize_shirts_or_pants("Pants")
 
     hairColors = ["Black", "Blonde", "Brown 1", "Brown 2", "Grey", "Red", "Tan", "White"]
+    # gender = "Man"
+    gender = "Woman"
     for hairColor in hairColors:
         folder = "Hair" + "/" + hairColor
         images = [image for image in core.get_files_in_folder(core.PNG_PATH + "Hair" + "/" + hairColor)]
-        images = [image for image in images if image.find("Man") >= 0]
+        images = [image for image in images if image.find(gender) >= 0]
         print "Analyzing %s" % (folder)
         maxWidth = 0
         maxHeight = 0
@@ -73,14 +75,19 @@ def main():
         for image in images:
             newImage = Image.new("RGBA", (maxWidth, maxHeight))
             oldImage = Image.open(core.get_image_path(image, core.PNG_PATH))
-            offsetX = (maxWidth - oldImage.size[0])
-            offsetY = (maxHeight - oldImage.size[1])
 
-            offsetX = 0
+            # Male
+            # offsetX = 0
+            # offsetY = (maxHeight - oldImage.size[1])
+
+            # Female
+            offsetX = (maxWidth - oldImage.size[0])/2
+            offsetY = 0
+
             newImage.paste(oldImage, (offsetX, offsetY))
             newImage.save(core.get_image_path(image, core.PNG_PATH))
 
-            print "Normalizing: %s, %s, offset=(%s,%s)" %(image, oldImage.size, offsetX, offsetY)
+            print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
 
 
 if __name__ == "__main__":
