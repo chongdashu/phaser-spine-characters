@@ -54,6 +54,7 @@ def main():
     for hairColor in hairColors:
         folder = "Hair" + "/" + hairColor
         images = [image for image in core.get_files_in_folder(core.PNG_PATH + "Hair" + "/" + hairColor)]
+        images = [image for image in images if image.find("Man") >= 0]
         print "Analyzing %s" % (folder)
         maxWidth = 0
         maxHeight = 0
@@ -68,6 +69,18 @@ def main():
                 maxHeight = im.size[1]
                 maxHeightImageName = image
         print "size.max = (%s,%s), names=(%s,%s)" % (maxWidth, maxHeight, maxWidthImageName, maxHeightImageName)
+
+        for image in images:
+            newImage = Image.new("RGBA", (maxWidth, maxHeight))
+            oldImage = Image.open(core.get_image_path(image, core.PNG_PATH))
+            offsetX = (maxWidth - oldImage.size[0])
+            offsetY = (maxHeight - oldImage.size[1])
+
+            offsetX = 0
+            newImage.paste(oldImage, (offsetX, offsetY))
+            newImage.save(core.get_image_path(image, core.PNG_PATH))
+
+            print "Normalizing: %s, %s, offset=(%s,%s)" %(image, oldImage.size, offsetX, offsetY)
 
 
 if __name__ == "__main__":
