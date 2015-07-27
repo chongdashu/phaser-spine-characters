@@ -22,8 +22,11 @@ JSON files serves as a data format to store information, probably particular use
 The scripts folder contains some useful scripts. Here are a list of them:
 
 0. `list_assets.py`: Looks through the `character_template.json` schema and uses it to generate different possible image names for each part of the character. This is just a utility script to make sure that no PNG image file in `assets/modularcharacters/PNG` is unused.
-  + Note: To run scripts, you will need the following python packages.
+
+0. `image_processing.py`: Looks through a bunch of the assets to help to normalize them in a way that doesn't require spine-js/spine-canvas to recalculate the UVs each time textures are swapped.   
+    + Note: To run scripts, you will need the following python packages.
      0. Pillow (i.e., pip install Pillow)
+
 
 ### Character Changes
 
