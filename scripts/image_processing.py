@@ -79,6 +79,9 @@ def main():
             newImage = Image.new("RGBA", (maxWidth, maxHeight))
             oldImage = Image.open(core.get_image_path(image, core.PNG_PATH))
 
+            offsetX = 0
+            offsetY = 0
+
             # Male
             # offsetX = 0
             # offsetY = (maxHeight - oldImage.size[1])
@@ -88,15 +91,18 @@ def main():
             # offsetY = 0
 
             # an
-            offsetX = (maxWidth - oldImage.size[0])/2
-            offsetY = (maxHeight - oldImage.size[1])/2
+            # Only do this after  normalizing both male and females!
+            if image.find("Woman") >= 0:
+                offsetX = (maxWidth - oldImage.size[0])/2
+                offsetY = 0
+            elif image.find("Man") >= 0:
+                offsetX = 7  # magic number from photoshop
+                offsetY = -18  # magic number from photoshop
 
-            # newImage.paste(oldImage, (offsetX, offsetY))
-            # newImage.save(core.get_image_path(image, core.PNG_PATH))
+            newImage.paste(oldImage, (offsetX, offsetY))
+            newImage.save(core.get_image_path(image, core.PNG_PATH))
 
             print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
-        return
-
 
 if __name__ == "__main__":
     main()

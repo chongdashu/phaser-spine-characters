@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "IU4YjKCDLdZ+pO/Ox2rR7xCyxbo", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
+"skeleton": { "hash": "FIJZ2v1kQ2MVpqx33FU6z1XGcSA", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "b_hip", "parent": "root", "x": 3.17, "y": 194.79 },
@@ -21,9 +21,9 @@
 	{ "name": "b_eye_right", "parent": "b_skin_head", "x": 68.54, "y": 18.96 },
 	{ "name": "b_eyebrow_left", "parent": "b_skin_head", "x": 95.29, "y": -33.01 },
 	{ "name": "b_eyebrow_right", "parent": "b_skin_head", "x": 96.01, "y": 20.29 },
-	{ "name": "b_hair", "parent": "b_skin_head", "x": 13.02, "y": 6.07 },
+	{ "name": "b_hair", "parent": "b_skin_head", "x": 13.02, "y": 0.11 },
 	{ "name": "b_mouth", "parent": "b_skin_head", "x": 34.08, "y": 0.59 },
-	{ "name": "b_nose", "parent": "b_skin_head", "x": 70.19, "y": 0.32 },
+	{ "name": "b_nose", "parent": "b_skin_head", "x": 55.5, "y": 0.32 },
 	{ "name": "b_skin_hand_left", "parent": "b_skin_arm_left", "length": 69.11, "x": 145.38, "y": -0.71, "rotation": -22.26 },
 	{ "name": "b_skin_hand_right", "parent": "b_skin_arm_right", "length": 65.25, "x": 165.06, "y": -3.54, "rotation": 28.86 }
 ],
@@ -73,7 +73,7 @@
 			"eyebrow_right-greyBrow2": { "x": 0.31, "y": -0.29, "rotation": -90.9, "width": 41, "height": 11 }
 		},
 		"slot_hair": {
-			"hair-blondeWoman3": { "x": 33.78, "y": -5.4, "rotation": -90.9, "width": 168, "height": 286 }
+			"hair-blondeWoman3": { "x": 33.78, "y": 0.56, "rotation": -90.9, "width": 171, "height": 286 }
 		},
 		"slot_leg_left": {
 			"leg_left-pantsTan_long": { "x": 81.66, "y": -0.14, "rotation": 73.63, "width": 111, "height": 166 }
