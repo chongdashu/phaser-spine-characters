@@ -18,7 +18,8 @@
         "eyebrow_right": {
             "part_type" : "eyebrow",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
 
         "eyebrow_left": {
@@ -30,7 +31,8 @@
         "eye_right": {
             "part_type" : "eye",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
 
         "eye_left": {
@@ -72,7 +74,8 @@
         "skin_arm_right" : {
             "part_type" : "skin_arm",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
         "skin_arm_left": {
             "part_type" : "skin_arm",
@@ -82,7 +85,8 @@
         "skin_hand_right" : {
             "part_type" : "skin_hand",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
         "skin_hand_left": {
             "part_type" : "skin_hand",
@@ -97,7 +101,8 @@
         "leg_right" : {
             "part_type" : "leg",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
         "leg_left" : {
             "part_type" : "leg",
@@ -107,7 +112,8 @@
         "skin_leg_right": {
             "part_type" : "skin_leg",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
         "skin_leg_left": {
             "part_type" : "skin_leg",
@@ -117,7 +123,8 @@
         "shoe_right": {
             "part_type" : "shoe",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
         "shoe_left": {
             "part_type" : "shoe",
