@@ -61,7 +61,8 @@
         "arm_right": {
             "part_type" : "arm",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "flipped" : true
         },
         "arm_left": {
             "part_type" : "arm",
