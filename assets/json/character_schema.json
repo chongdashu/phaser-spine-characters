@@ -45,7 +45,7 @@
         },
 
         "shoe" : {
-            "color" : ["black", "blue", "brown", "brown2", "grey", "red", "tan"],
+            "color" : ["black", "blue", "brown1", "brown2", "grey", "red", "tan"],
             "variant" : 5,
             "format" : "<color>Shoe<variant>",
             "folder": "Shoes"
@@ -61,21 +61,24 @@
         "mouth" : {
             "variant": ["glad", "happy", "oh", "sad", "straight", "teethLower", "teethUpper"],
             "format": "mouth_<variant>",
-            "folder": "Face/Mouth"
+            "folder": "Face/Mouth",
+            "subfolder": "."
         },
 
         "eyebrow" : {
             "variant" : 3,
             "color" : ["black", "blonde", "brown1", "brown2", "grey", "red", "tan", "white"],
             "format": "<color>Brow<variant>",
-            "folder": "Face/Eyebrows"
+            "folder": "Face/Eyebrows",
+            "subfolder": "."
         },
 
         "eye" : {
             "color" : ["Black", "Blue", "Brown", "Green", "Pine"],
             "variant" : ["large", "small"],
             "format" : "eye<color>_<variant>",
-            "folder" : "Face/Eyes"
+            "folder" : "Face/Eyes",
+            "subfolder": "."
         },
 
         "skin_arm" : {
