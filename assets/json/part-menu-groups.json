@@ -1,0 +1,19 @@
+{
+        
+    "skin_tone" : {
+
+        "name": "Skin Tone",
+        "group_name" : "skin_tone",
+        "group_parts" : [
+            "skin_head",
+            "skin_neck",
+            "skin_arm_right",
+            "skin_arm_left",
+            "skin_hand_right",
+            "skin_hand_left",
+            "skin_leg_right",
+            "skin_leg_left"
+        ]
+    }
+
+}
