@@ -1,4 +1,39 @@
 {
+    "pants_length" : {
+        "name": "Pants Length",
+        "group_name" : "pants_length",
+        "group_parts" : ["leg_right", "leg_left"],
+        "variant": ["large", "small"],
+        "color" : ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
+        "variant" : ["_long", "_short", "_shorter"],
+        "format" : "pantsLength<color><variant>",
+        "folder" : "Groups/Pants Length",
+        "subfolder": "."
+    },
+
+    "shirt_sleeves" : {
+        "name": "Shirt Sleeves",
+        "group_name" : "shirt_sleeves",
+        "group_parts" : ["arm_right", "arm_left"],
+        "variant": ["large", "small"],
+        "color" : ["blue", "green", "grey", "navy", "pine", "red", "white", "yellow"],
+        "variant" : ["_long", "_short", "_shorter"],
+        "format" : "<color>ShirtSleeves<variant>",
+        "folder" : "Groups/Shirt Sleeves",
+        "subfolder": "."
+    },
+
+    "eye_pair" : {
+        "name": "Eyes",
+        "group_name" : "eye_pair",
+        "group_parts" : ["eye_right", "eye_left"],
+        "variant": ["large", "small"],
+        "color" : ["Black", "Blue", "Brown", "Green", "Pine"],
+        "format" : "eyepair<color>_<variant>",
+        "folder" : "Groups/Eye Pair",
+        "subfolder": "."
+    },
+
     "skin_tone" : {
 
         "name": "Skin Tone",
@@ -14,22 +49,11 @@
             "skin_leg_left"
         ],
         "group_mapping" :{
-            "variant" : "variant",
+            "variant" : "variant"
         },
         "variant" : 8,
         "format": "tint<variant>",
         "folder": "Groups/Skin Tone",
-        "subfolder": "."
-    },
-
-    "eye_pair" : {
-        "name": "Eye Pair",
-        "group_name" : "eye_pair",
-        "group_parts" : ["eye_right", "eye_left"],
-        "variant": ["large", "small"],
-        "color" : ["Black", "Blue", "Brown", "Green", "Pine"],
-        "format" : "eyepair<color>_<variant>",
-        "folder" : "Groups/Eye Pair",
         "subfolder": "."
     }
 
