@@ -64,12 +64,14 @@
             "part_type" : "arm",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name": "Right Sleeve"
         },
         "arm_left": {
             "part_type" : "arm",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name": "Left Sleeve"
         },
         "skin_arm_right" : {
             "part_type" : "skin_arm",

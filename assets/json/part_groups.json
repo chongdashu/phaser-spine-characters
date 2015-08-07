@@ -1,5 +1,4 @@
 {
-        
     "skin_tone" : {
 
         "name": "Skin Tone",
@@ -14,8 +13,21 @@
             "skin_leg_right",
             "skin_leg_left"
         ],
+        "variant" : 8,
         "format": "tint<variant>",
-        "folder": "Groups/Skin Tone"
+        "folder": "Groups/Skin Tone",
+        "subfolder": "."
+    },
+
+    "eye_pair" : {
+        "name": "Eye Pair",
+        "group_name" : "eye_pair",
+        "group_parts" : ["eye_right", "eye_left"],
+        "variant": ["large", "small"],
+        "color" : ["Black", "Blue", "Brown", "Green", "Pine"],
+        "format" : "eyepair<color>_<variant>",
+        "folder" : "Groups/Eye Pair",
+        "subfolder": "."
     }
 
 }
