@@ -1,9 +1,30 @@
 {
+    "eyebrow_pair" : {
+        "name": "Eyebrows",
+        "group_name" : "eyebrow_pair",
+        "group_parts" : ["eyebrow_right", "eyebrow_left"],
+        "variant" : 3,
+        "color" : ["black", "blonde", "brown1", "brown2", "grey", "red", "tan", "white"],
+        "format": "<color>BrowPair<variant>",
+        "folder" : "Groups/Eyebrow Pair",
+        "subfolder": "."
+    },
+
+    "shoe_pair" : {
+        "name": "Shoes",
+        "group_name" : "shoe_pair",
+        "group_parts" : ["shoe_right", "shoe_left"],
+        "color" : ["black", "blue", "brown1", "brown2", "grey", "red", "tan"],
+        "variant" : 5,
+        "format" : "<color>ShoePair<variant>",
+        "folder" : "Groups/Shoe Pair",
+        "subfolder": "."
+    },
+
     "pants_length" : {
         "name": "Pants Length",
         "group_name" : "pants_length",
         "group_parts" : ["leg_right", "leg_left"],
-        "variant": ["large", "small"],
         "color" : ["Blue1", "Blue2", "Brown", "Green", "Green", "Grey", "LightBlue", "Navy", "Pine", "Red", "Tan", "White", "Yellow"],
         "variant" : ["_long", "_short", "_shorter"],
         "format" : "pantsLength<color><variant>",
