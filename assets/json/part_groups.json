@@ -13,7 +13,9 @@
             "skin_hand_left",
             "skin_leg_right",
             "skin_leg_left"
-        ]
+        ],
+        "format": "tint<variant>",
+        "folder": "Groups/Skin Tone"
     }
 
 }
