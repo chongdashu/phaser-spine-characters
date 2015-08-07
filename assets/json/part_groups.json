@@ -13,6 +13,9 @@
             "skin_leg_right",
             "skin_leg_left"
         ],
+        "group_mapping" :{
+            "variant" : "variant",
+        },
         "variant" : 8,
         "format": "tint<variant>",
         "folder": "Groups/Skin Tone",
