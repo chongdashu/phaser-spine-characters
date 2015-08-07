@@ -6,59 +6,69 @@
         "hair": {
             "part_type" : "hair",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Hair"
         },
 
         "skin_head": {
             "part_type" : "skin_head",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Face"
         },
 
         "eyebrow_right": {
             "part_type" : "eyebrow",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Right Brow"
         },
 
         "eyebrow_left": {
             "part_type" : "eyebrow",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Brow"
         },
 
         "eye_right": {
             "part_type" : "eye",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Right Eye"
         },
 
         "eye_left": {
             "part_type" : "eye",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Eye"
         },
         "nose": {
             "part_type" : "nose",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Nose"
         },
         "mouth" : {
             "part_type" : "mouth",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Mouth"
         },
         "skin_neck": {
             "part_type" : "skin_neck",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Neck"
         },
         "shirt" : {
             "part_type" : "shirt",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Shirt"
         },
         "arm_right": {
             "part_type" : "arm",
@@ -77,61 +87,73 @@
             "part_type" : "skin_arm",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Right Arm"
         },
         "skin_arm_left": {
             "part_type" : "skin_arm",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Arm"
         },
         "skin_hand_right" : {
             "part_type" : "skin_hand",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Left Sleeve"
         },
         "skin_hand_left": {
             "part_type" : "skin_hand",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Hand"
         },
         "pants": {
             "part_type" : "pants",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Pants"
         },
         "leg_right" : {
             "part_type" : "leg",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Right Trouser"
         },
         "leg_left" : {
             "part_type" : "leg",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Trouser"
+
         },
         "skin_leg_right": {
             "part_type" : "skin_leg",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Right Leg"
         },
         "skin_leg_left": {
             "part_type" : "skin_leg",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Leg"
         },
         "shoe_right": {
             "part_type" : "shoe",
             "part_info" : {},
             "image" : "",
-            "flipped" : true
+            "flipped" : true,
+            "name" : "Right Shoe"
         },
         "shoe_left": {
             "part_type" : "shoe",
             "part_info" : {},
-            "image" : ""
+            "image" : "",
+            "name" : "Left Shoe"
         }
     }
 }
