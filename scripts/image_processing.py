@@ -54,7 +54,7 @@ def main():
 
     # gender = "Man"
     # gender = "Woman"
-    gender = "an"
+    gender = "an"      # "an" is contained in both "Man" and "Woman"
 
     for hairColor in hairColors:
         folder = "Hair" + "/" + hairColor
