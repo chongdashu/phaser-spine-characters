@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "FIJZ2v1kQ2MVpqx33FU6z1XGcSA", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
+"skeleton": { "hash": "N6d9a+ZKcMcDL2UfOyBgft57L2g", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "b_hip", "parent": "root", "x": 3.17, "y": 194.79 },
@@ -70,7 +70,7 @@
 			"eyebrow_left-whiteBrow1": { "x": 0.88, "y": 0.44, "rotation": -90.9, "width": 40, "height": 17 }
 		},
 		"slot_eyebrow_right": {
-			"eyebrow_right-greyBrow2": { "x": 0.31, "y": -0.29, "rotation": -90.9, "width": 41, "height": 11 }
+			"eyebrow_right-greyBrow2": { "x": 0.31, "y": -0.29, "scaleX": -1, "rotation": -90.9, "width": 40, "height": 17 }
 		},
 		"slot_hair": {
 			"hair-blondeWoman3": { "x": 33.78, "y": 0.56, "rotation": -90.9, "width": 171, "height": 286 }
