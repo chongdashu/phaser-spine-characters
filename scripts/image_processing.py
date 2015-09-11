@@ -36,19 +36,7 @@ def normalize_shirts_or_pants(shirtsOrPants="Shirts"):
         newShorterImage.save(core.get_image_path(prefix + "_shorter.png", core.PNG_PATH))
 
 
-images = []
-prefixes = []
-
-
-def main():
-    '''
-    Shirts - Arms
-    '''
-    global images
-    global prefixes
-
-    # normalize_shirts_or_pants("Shirts")
-    # normalize_shirts_or_pants("Pants")
+def normalize_hair():
 
     hairColors = ["Black", "Blonde", "Brown 1", "Brown 2", "Grey", "Red", "Tan", "White"]
 
@@ -103,6 +91,41 @@ def main():
             newImage.save(core.get_image_path(image, core.PNG_PATH))
 
             print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
+
+images = []
+prefixes = []
+
+
+def main():
+    '''
+    Shirts - Arms
+    '''
+    global images
+    global prefixes
+
+    # normalize_shirts_or_pants("Shirts")
+    # normalize_shirts_or_pants("Pants")
+    # normalize_hair()
+
+    # TODO: normalize_eyebrows
+    # TODO: normalize_mouth
+
+    eyebrow_images = core.get_files_in_folder(core.PNG_PATH + "Face/Eyebrows")
+    for image in eyebrow_images:
+        maxWidth = 0
+        maxHeight = 0
+        maxWidthImageName = ""
+        maxHeightImageName = ""
+        im = Image.open(core.get_image_path(image, core.PNG_PATH))
+        if (im.size[0] > maxWidth):
+            maxWidth = im.size[0]
+            maxWidthImageName = image
+
+        if (im.size[1] > maxHeight):
+            maxHeight = im.size[1]
+            maxHeightImageName = image
+    print "size.max = (%s,%s), names=(%s,%s)" % (maxWidth, maxHeight, maxWidthImageName, maxHeightImageName)
+
 
 if __name__ == "__main__":
     main()
