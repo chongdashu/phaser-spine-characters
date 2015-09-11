@@ -126,6 +126,21 @@ def main():
             maxHeightImageName = image
     print "size.max = (%s,%s), names=(%s,%s)" % (maxWidth, maxHeight, maxWidthImageName, maxHeightImageName)
 
+    for image in images:
+        newImage = Image.new("RGBA", (maxWidth, maxHeight))
+        oldImage = Image.open(core.get_image_path(image, core.PNG_PATH))
+
+        offsetX = 0
+        # offsetY = 0
+
+        # offsetX = (maxWidth - oldImage.size[0])/2
+        offsetY = (maxHeight - oldImage.size[1])
+
+        newImage.paste(oldImage, (offsetX, offsetY))
+        newImage.save(core.get_image_path(image, core.PNG_PATH))
+
+        print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
+
 
 if __name__ == "__main__":
     main()
