@@ -110,8 +110,8 @@ def main():
     # TODO: normalize_eyebrows
     # TODO: normalize_mouth
 
-    eyebrow_images = core.get_files_in_folder(core.PNG_PATH + "Face/Eyebrows")
-    for image in eyebrow_images:
+    images = core.get_files_in_folder(core.PNG_PATH + "Face/Eyebrows")
+    for image in images:
         maxWidth = 0
         maxHeight = 0
         maxWidthImageName = ""
@@ -134,10 +134,10 @@ def main():
         # offsetY = 0
 
         # offsetX = (maxWidth - oldImage.size[0])/2
-        offsetY = (maxHeight - oldImage.size[1])
+        offsetY = (maxHeight - oldImage.size[1])/2
 
         newImage.paste(oldImage, (offsetX, offsetY))
-        newImage.save(core.get_image_path(image, core.PNG_PATH))
+        # newImage.save(core.get_image_path(image, core.PNG_PATH))
 
         print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
 
