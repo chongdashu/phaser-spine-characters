@@ -137,7 +137,7 @@ def main():
         offsetY = (maxHeight - oldImage.size[1])/2
 
         newImage.paste(oldImage, (offsetX, offsetY))
-        # newImage.save(core.get_image_path(image, core.PNG_PATH))
+        newImage.save(core.get_image_path(image, core.PNG_PATH))
 
         print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
 
