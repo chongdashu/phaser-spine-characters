@@ -51,6 +51,10 @@ def normalize_mouth(dryRun=True):
     normalize("Face/Mouth", dryRun=dryRun)
 
 
+def normalize_nose(dryRun=True):
+    normalize("Face/Nose", dryRun=dryRun)
+
+
 def normalize_shirts_or_pants(shirtsOrPants="Shirts"):
 
     shirtsFolder = core.PNG_PATH + shirtsOrPants
@@ -146,7 +150,8 @@ def main():
     # normalize_shirts_or_pants("Pants")
     # normalize_hair()
     # normalize_eyebrows()
-    normalize_mouth(dryRun=False)
+    # normalize_mouth(dryRun=False)
+    normalize_nose(dryRun=False)
 
 
 if __name__ == "__main__":
