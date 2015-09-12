@@ -47,8 +47,8 @@ def normalize_eyebrows():
     normalize("Face/Eyebrows", offsetX=0)
 
 
-def normalize_mouth():
-    normalize("Face/Mouth")
+def normalize_mouth(dryRun=True):
+    normalize("Face/Mouth", dryRun=dryRun)
 
 
 def normalize_shirts_or_pants(shirtsOrPants="Shirts"):
@@ -146,7 +146,7 @@ def main():
     # normalize_shirts_or_pants("Pants")
     # normalize_hair()
     # normalize_eyebrows()
-    normalize_mouth()
+    normalize_mouth(dryRun=False)
 
 
 if __name__ == "__main__":
