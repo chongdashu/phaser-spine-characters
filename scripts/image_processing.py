@@ -12,6 +12,45 @@ def is_shirt(imageName):
     return imageName.find("_short") >= 0 or imageName.find("_shorter") >= 0 or imageName.find("_long") >= 0
 
 
+def normalize(relativePath, offsetX=None, offsetY=None, dryRun=True):
+    images = core.get_files_in_folder(core.PNG_PATH + relativePath)
+    maxWidth = 0
+    maxHeight = 0
+    maxWidthImageName = ""
+    maxHeightImageName = ""
+    for image in images:
+        im = Image.open(core.get_image_path(image, core.PNG_PATH))
+        if (im.size[0] > maxWidth):
+            maxWidth = im.size[0]
+            maxWidthImageName = image
+
+        if (im.size[1] > maxHeight):
+            maxHeight = im.size[1]
+            maxHeightImageName = image
+    print "size.max = (%s,%s), names=(%s,%s)" % (maxWidth, maxHeight, maxWidthImageName, maxHeightImageName)
+
+    for image in images:
+        newImage = Image.new("RGBA", (maxWidth, maxHeight))
+        oldImage = Image.open(core.get_image_path(image, core.PNG_PATH))
+
+        offsetX_ = offsetX if offsetX is not None else (maxWidth-oldImage.size[0])/2
+        offsetY_ = offsetY if offsetY is not None else (maxHeight-oldImage.size[1])/2
+
+        newImage.paste(oldImage, (offsetX_, offsetY_))
+        if not dryRun:
+            newImage.save(core.get_image_path(image, core.PNG_PATH))
+
+        print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX_, offsetY_)
+
+
+def normalize_eyebrows():
+    normalize("Face/Eyebrows", offsetX=0)
+
+
+def normalize_mouth():
+    normalize("Face/Mouth")
+
+
 def normalize_shirts_or_pants(shirtsOrPants="Shirts"):
 
     shirtsFolder = core.PNG_PATH + shirtsOrPants
@@ -106,40 +145,8 @@ def main():
     # normalize_shirts_or_pants("Shirts")
     # normalize_shirts_or_pants("Pants")
     # normalize_hair()
-
-    # TODO: normalize_eyebrows
-    # TODO: normalize_mouth
-
-    images = core.get_files_in_folder(core.PNG_PATH + "Face/Eyebrows")
-    for image in images:
-        maxWidth = 0
-        maxHeight = 0
-        maxWidthImageName = ""
-        maxHeightImageName = ""
-        im = Image.open(core.get_image_path(image, core.PNG_PATH))
-        if (im.size[0] > maxWidth):
-            maxWidth = im.size[0]
-            maxWidthImageName = image
-
-        if (im.size[1] > maxHeight):
-            maxHeight = im.size[1]
-            maxHeightImageName = image
-    print "size.max = (%s,%s), names=(%s,%s)" % (maxWidth, maxHeight, maxWidthImageName, maxHeightImageName)
-
-    for image in images:
-        newImage = Image.new("RGBA", (maxWidth, maxHeight))
-        oldImage = Image.open(core.get_image_path(image, core.PNG_PATH))
-
-        offsetX = 0
-        # offsetY = 0
-
-        # offsetX = (maxWidth - oldImage.size[0])/2
-        offsetY = (maxHeight - oldImage.size[1])/2
-
-        newImage.paste(oldImage, (offsetX, offsetY))
-        newImage.save(core.get_image_path(image, core.PNG_PATH))
-
-        print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX, offsetY)
+    # normalize_eyebrows()
+    normalize_mouth()
 
 
 if __name__ == "__main__":
