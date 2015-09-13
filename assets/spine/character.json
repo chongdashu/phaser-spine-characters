@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "N6d9a+ZKcMcDL2UfOyBgft57L2g", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
+"skeleton": { "hash": "TRCcy3L3EmBcoqG114wXjQ5NqIg", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "b_hip", "parent": "root", "x": 3.17, "y": 194.79 },
@@ -76,16 +76,16 @@
 			"hair-blondeWoman3": { "x": 33.78, "y": 0.56, "rotation": -90.9, "width": 171, "height": 286 }
 		},
 		"slot_leg_left": {
-			"leg_left-pantsTan_long": { "x": 81.66, "y": -0.14, "rotation": 73.63, "width": 111, "height": 166 }
+			"leg_left-pantsTan_long": { "x": 70.45, "y": -4.73, "rotation": 73.63, "width": 111, "height": 166 }
 		},
 		"slot_leg_right": {
-			"leg_right-pantsPine_short": { "x": 57.17, "y": 2.28, "scaleX": -1, "rotation": 102, "width": 111, "height": 166 }
+			"leg_right-pantsPine_short": { "x": 65.89, "y": 2.2, "scaleX": -1, "rotation": 102, "width": 111, "height": 166 }
 		},
 		"slot_mouth": {
-			"mouth-mouth_teethUpper": { "x": 1.7, "y": 0.99, "rotation": -90.9, "width": 34, "height": 13 }
+			"mouth-mouth_teethUpper": { "x": 1.7, "y": 0.99, "rotation": -90.9, "width": 36, "height": 15 }
 		},
 		"slot_nose": {
-			"nose-tint7Nose1": { "x": 3.61, "y": 0.25, "rotation": -90.9, "width": 31, "height": 21 }
+			"nose-tint7Nose1": { "x": 3.61, "y": 0.25, "rotation": -90.9, "width": 31, "height": 24 }
 		},
 		"slot_pants": {
 			"pants-pantsBlue13": { "x": -1.41, "y": -2.06, "width": 153, "height": 47 }
