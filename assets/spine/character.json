@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "TRCcy3L3EmBcoqG114wXjQ5NqIg", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
+"skeleton": { "hash": "OCQD/bBEFeg/An5D6awvXnsB1ro", "spine": "2.1.27", "width": 470.62, "height": 552.12 },
 "bones": [
 	{ "name": "root" },
 	{ "name": "b_hip", "parent": "root", "x": 3.17, "y": 194.79 },
@@ -37,11 +37,11 @@
 	{ "name": "slot_shoe_right", "bone": "b_shoe_right", "attachment": "shoe_right-greyShoe1" },
 	{ "name": "slot_shoe_left", "bone": "b_shoe_left", "attachment": "shoe_left-brown2Shoe5" },
 	{ "name": "slot_leg_left", "bone": "b_leg_left", "attachment": "leg_left-pantsTan_long" },
+	{ "name": "slot_arm_left", "bone": "b_arm_left", "attachment": "arm_left-blueArm_long" },
+	{ "name": "slot_arm_right", "bone": "b_arm_right", "attachment": "arm_right-navyArm_shorter" },
 	{ "name": "slot_leg_right", "bone": "b_leg_right", "attachment": "leg_right-pantsPine_short" },
 	{ "name": "slot_pants", "bone": "b_pants", "attachment": "pants-pantsBlue13" },
 	{ "name": "slot_shirt", "bone": "b_shirt", "attachment": "shirt-blueShirt8" },
-	{ "name": "slot_arm_left", "bone": "b_arm_left", "attachment": "arm_left-blueArm_long" },
-	{ "name": "slot_arm_right", "bone": "b_arm_right", "attachment": "arm_right-navyArm_shorter" },
 	{ "name": "slot_skin_neck", "bone": "b_skin_neck", "attachment": "skin_neck-tint4_neck" },
 	{ "name": "slot_skin_head", "bone": "b_skin_head", "attachment": "skin_head-tint8_head" },
 	{ "name": "slot_nose", "bone": "b_nose", "attachment": "nose-tint7Nose1" },
@@ -55,7 +55,7 @@
 "skins": {
 	"default": {
 		"slot_arm_left": {
-			"arm_left-blueArm_long": { "x": 91.96, "y": 7.44, "rotation": 28.86, "width": 171, "height": 142 }
+			"arm_left-blueArm_long": { "x": 92.41, "y": 6.61, "rotation": 28.86, "width": 171, "height": 142 }
 		},
 		"slot_arm_right": {
 			"arm_right-navyArm_shorter": { "x": 87.2, "y": -18.48, "scaleX": -1, "rotation": 148.9, "width": 171, "height": 142 }
