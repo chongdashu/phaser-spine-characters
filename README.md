@@ -36,6 +36,10 @@ I detected some naming inconsistencies in some of the files provided in the char
 + In `Shirts/White/`: renamed `armWhite_<...>` to `whiteArm_<...>` for consistency.
 + In `Shirts/Yellow/`: renamed `shirtYellow<...>` to `yellowShirt<...>` for consistency.
 
+### Normalizing images
+
+Because of the way Spine handles bone attachments -- some categories of images have been normalized such that they are of the same size and center-aligned, where possible. Transparent pixels are placed to pad up images that were initially smaller. 
+
 
 ## Included  External Resources
 
