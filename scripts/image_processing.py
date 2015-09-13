@@ -43,6 +43,10 @@ def normalize(relativePath, offsetX=None, offsetY=None, dryRun=True):
         print "Normalizing: %s, %s, offset=(%s,%s)" % (image, oldImage.size, offsetX_, offsetY_)
 
 
+def normalize_eyes(dryRun=True):
+    normalize("Face/Eyes", dryRun=dryRun)
+
+
 def normalize_eyebrows():
     normalize("Face/Eyebrows", offsetX=0)
 
@@ -151,7 +155,8 @@ def main():
     # normalize_hair()
     # normalize_eyebrows()
     # normalize_mouth(dryRun=False)
-    normalize_nose(dryRun=False)
+    # normalize_nose(dryRun=False)
+    normalize_eyes(dryRun=False)
 
 
 if __name__ == "__main__":
