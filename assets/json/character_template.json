@@ -23,14 +23,16 @@
             "part_info" : {},
             "image" : "",
             "flipped" : true,
-            "name" : "Right Brow"
+            "name" : "Right Brow",
+            "removable" : true
         },
 
         "eyebrow_left": {
             "part_type" : "eyebrow",
             "part_info" : {},
             "image" : "",
-            "name" : "Left Brow"
+            "name" : "Left Brow",
+            "removable" : true
         },
 
         "eye_right": {
@@ -38,26 +40,30 @@
             "part_info" : {},
             "image" : "",
             "flipped" : true,
-            "name" : "Right Eye"
+            "name" : "Right Eye",
+            "removable" : true
         },
 
         "eye_left": {
             "part_type" : "eye",
             "part_info" : {},
             "image" : "",
-            "name" : "Left Eye"
+            "name" : "Left Eye",
+            "removable" : true
         },
         "nose": {
             "part_type" : "nose",
             "part_info" : {},
             "image" : "",
-            "name" : "Nose"
+            "name" : "Nose",
+            "removable" : true
         },
         "mouth" : {
             "part_type" : "mouth",
             "part_info" : {},
             "image" : "",
-            "name" : "Mouth"
+            "name" : "Mouth",
+            "removable" : true
         },
         "skin_neck": {
             "part_type" : "skin_neck",
@@ -76,13 +82,15 @@
             "part_info" : {},
             "image" : "",
             "flipped" : true,
-            "name": "Right Sleeve"
+            "name": "Right Sleeve",
+            "removable" : true
         },
         "arm_left": {
             "part_type" : "arm",
             "part_info" : {},
             "image" : "",
-            "name": "Left Sleeve"
+            "name": "Left Sleeve",
+            "removable" : true
         },
         "skin_arm_right" : {
             "part_type" : "skin_arm",
@@ -121,13 +129,15 @@
             "part_info" : {},
             "image" : "",
             "flipped" : true,
-            "name" : "Right Trouser"
+            "name" : "Right Trouser",
+            "removable" : true
         },
         "leg_left" : {
             "part_type" : "leg",
             "part_info" : {},
             "image" : "",
-            "name" : "Left Trouser"
+            "name" : "Left Trouser",
+            "removable" : true
 
         },
         "skin_leg_right": {
